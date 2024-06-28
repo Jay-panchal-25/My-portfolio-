@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  justify-content: center;
+  background-color: #2d2839;
+
+  color: #d1d7e0;
+}
+.container {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#big-image {
+  filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));
+}
+#big-image:hover {
+  filter: drop-shadow(0 -6mm 4mm rgb(25, 221, 221));
+}
+
+.title {
+  font-size: 70px;
+  color: #802bb1;
+  font-weight: bolder;
+  font-family: cursive;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+/*----------------nav----------------------------------------------------------------------*/
+
+.logo {
+  font-size: 60px;
+  color: 86C232;
+  font-weight: bolder;
+  font-family: cursive;
+  color: #802bb1;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #151719;
+  cursor: pointer;
+}
+nav li :hover {
+  color: rgb(160, 0, 210);
+  font-size: 30px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+/*-------------------Home--------------------------------------------------------------------*/
+.home-content {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.header-text {
+  margin-top: 10%;
+  font-size: 30px;
+}
+
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.header-text h1 span {
+  color: #802bb1;
+  font-size: 70px;
+}
+
+/*----------------skill-----------------------------------------------------------------------------*/
+
+.skill {
+  display: flex;
+  justify-content: space-evenly;
+}
+.skill-name {
+  font-size: 20px;
+  font-weight: 100;
+  font-family: "Courier New";
+  padding: 30px 0px 20px 0px;
+
+  font-weight: 600;
+}
+
+.Technical {
+  padding: 0px 40px 40px 40px;
+  width: 550px;
+}
+
+.professional-col {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.skill-bar {
+  height: 20px;
+  background-color: black;
+  border-radius: 3px;
+}
+
+.skill-per {
+  height: 20px;
+  background-color: rgb(185, 3, 241);
+  border-radius: 3px;
+  position: relative;
+  animation: fillbars 2.5s 1;
+}
+
+.skill-per::before {
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+  top: -3px;
+  right: 0;
+  border-radius: 3px;
+  font-weight: 700;
+}
+
+@keyframes fillbars {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.skill-box {
+  box-shadow: 0 4px 8px 0 rgb(160, 0, 210);
+  margin: 20px;
+}
+
+.professional-skill {
+  padding: 40px;
+}
+
+@keyframes progress {
+  0% {
+    --percentage: 0;
+  }
+  100% {
+    --percentage: var(--value);
+  }
+}
+
+@property --percentage {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+[role="progressbar"] {
+  --percentage: var(--value);
+  --primary: rgb(160, 0, 210);
+  --secondary: rgb(0, 0, 0);
+  --size: 120px;
+  animation: progress 2s 0.5s forwards;
+  width: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+[role="progressbar"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(
+    var(--primary) calc(var(--percentage) * 1%),
+    var(--secondary) 0
+  );
+  mask: radial-gradient(white 55%, transparent 0);
+  mask-mode: alpha;
+  -webkit-mask: radial-gradient(#0000 55%, #000 0);
+  -webkit-mask-mode: alpha;
+}
+
+[role="progressbar"]::after {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) "%";
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--primary);
+}
+
+/*----------------about me-----------------------------------------------------------------------*/
+.about-content {
+  display: flex;
+  font-size: 28px;
+  align-items: center;
+}
+
+.about-edu {
+  display: flex;
+}
+
+.content {
+  box-shadow: 0 4px 8px 0 rgb(160, 0, 210);
+
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/*----------------contact me--------------------------------------------------------------------------*/
+.contact-me {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-text {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.contact-logo {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-logo:hover {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+/*---------------- footer--------------------------------------------------------------------------------------*/
+.footer {
+  background-color: #151719;
+  text-align: center;
+  font-size: 50px;
+  padding: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 0%;
+    margin: 0%;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 20px;
+    padding: 20px 0px 20px 0px;
+  }
+
+  nav ul {
+    top: -500px;
+    display: none;
+  }
+
+  .header-text h1 span {
+    color: #802bb1;
+    font-size: 20px;
+  }
+  .home-content img {
+    height: 250px;
+    width: 200px;
+  }
+  .home-content h1 {
+    font-size: 25px;
+  }
+  .home-content p {
+    font-size: 15px;
+  }
+
+  .about-content {
+    display: flex;
+    font-size: 10px;
+  }
+  .about-content img {
+    height: 180px;
+    width: 180px;
+    justify-content: center;
+  }
+
+  .skill {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+  }
+
+  .skill-tittle {
+    font-size: 15px;
+  }
+
+  [role="progressbar"] {
+    --size: 70px;
+  }
+  .skill-name {
+    font-size: 11px;
+  }
+  .Technical {
+    padding: 0px 40px 20px 40px;
+    width: 350px;
+  }
+  .skill-bar {
+    height: 10px;
+  }
+
+  .skill-per {
+    height: 10px;
+  }
+
+  .skill-per::before {
+    font-size: 8px;
+    top: -4px;
+  }
+
+  .contact-me {
+    display: flex;
+    font-size: 6px;
+  }
+  .contact-img img {
+    height: 200px;
+    width: 210px;
+  }
+  .contact-logo img {
+    height: 15px;
+    width: 15px;
+  }
+
+  .footer {
+    font-size: 25px;
+  }
+}
