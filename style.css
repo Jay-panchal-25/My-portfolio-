@@ -1,6 +1,6 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
@@ -12,31 +12,30 @@ body {
   color: #d1d7e0;
 }
 .container {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0vmin 10vmin 0vmin 10vmin;
 }
 
 #big-image {
   filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));
+  height: 70vmin;
 }
 #big-image:hover {
   filter: drop-shadow(0 -6mm 4mm rgb(25, 221, 221));
 }
 
 .title {
-  font-size: 70px;
+  font-size: 7vmin;
   color: #802bb1;
   font-weight: bolder;
   font-family: cursive;
   text-align: center;
-  padding-top: 60px;
-  padding-bottom: 30px;
+  padding: 5vmin 0vmin 5vmin 0vmin;
 }
 
 /*----------------nav----------------------------------------------------------------------*/
 
 .logo {
-  font-size: 60px;
+  font-size: 7vmin;
   color: 86C232;
   font-weight: bolder;
   font-family: cursive;
@@ -53,19 +52,19 @@ nav {
 }
 nav li :hover {
   color: rgb(160, 0, 210);
-  font-size: 30px;
+  font-size: 3.5vmin;
 }
 
 nav ul li {
   display: inline-block;
   list-style: none;
-  margin: 10px 20px;
+  margin: 1vmin 2vmin;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 2.5vmin;
   position: relative;
 }
 
@@ -73,22 +72,22 @@ nav ul li a {
 .home-content {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: 3vmin;
 }
 
 .header-text {
   margin-top: 10%;
-  font-size: 30px;
+  font-size: 5vmin;
 }
 
 .header-text h1 {
-  font-size: 60px;
-  margin-top: 20px;
+  font-size: 8vmin;
+  margin-top: 1vmin;
 }
 
 .header-text h1 span {
   color: #802bb1;
-  font-size: 70px;
+  font-size: 10vmin;
 }
 
 /*----------------skill-----------------------------------------------------------------------------*/
@@ -98,17 +97,16 @@ nav ul li a {
   justify-content: space-evenly;
 }
 .skill-name {
-  font-size: 20px;
+  font-size: 3vmin;
   font-weight: 100;
   font-family: "Courier New";
-  padding: 30px 0px 20px 0px;
-
+  padding: 4vmin 0vmin 3vmin 0vmin;
   font-weight: 600;
 }
 
 .Technical {
-  padding: 0px 40px 40px 40px;
-  width: 550px;
+  padding: 0vmin 7vmin 7vmin 7vmin;
+  width: 70vmin;
 }
 
 .professional-col {
@@ -117,29 +115,29 @@ nav ul li a {
   align-items: center;
 }
 .skill-bar {
-  height: 20px;
+  height: 3.1vmin;
   background-color: black;
-  border-radius: 3px;
+  border-radius: 5vmin;
 }
 
 .skill-per {
-  height: 20px;
+  height: 3vmin;
   background-color: rgb(185, 3, 241);
-  border-radius: 3px;
+  border-radius: 5vmin;
   position: relative;
-  animation: fillbars 2.5s 1;
+  animation: fillbars 2s 1;
 }
 
 .skill-per::before {
   content: attr(per);
   position: absolute;
-  padding: 4px 6px;
+  padding: 0.5vmin 1vmin;
   color: white;
-  border-radius: 4px;
-  font-size: 16px;
-  top: -3px;
+  border-radius: 0.5vmin;
+  font-size: 2vmin;
+  top: -0.5vmin;
   right: 0;
-  border-radius: 3px;
+  border-radius: 5vmin;
   font-weight: 700;
 }
 
@@ -153,12 +151,12 @@ nav ul li a {
 }
 
 .skill-box {
-  box-shadow: 0 4px 8px 0 rgb(160, 0, 210);
-  margin: 20px;
+  box-shadow: 0 1vmin 2vmin 0 rgb(160, 0, 210);
+  margin: 2vmin;
 }
 
 .professional-skill {
-  padding: 40px;
+  padding: 5vmin;
 }
 
 @keyframes progress {
@@ -180,7 +178,7 @@ nav ul li a {
   --percentage: var(--value);
   --primary: rgb(160, 0, 210);
   --secondary: rgb(0, 0, 0);
-  --size: 120px;
+  --size: 17vmin;
   animation: progress 2s 0.5s forwards;
   width: var(--size);
   aspect-ratio: 1;
@@ -219,7 +217,7 @@ nav ul li a {
 /*----------------about me-----------------------------------------------------------------------*/
 .about-content {
   display: flex;
-  font-size: 28px;
+  font-size: 3.5vmin;
   align-items: center;
 }
 
@@ -228,46 +226,65 @@ nav ul li a {
 }
 
 .content {
-  box-shadow: 0 4px 8px 0 rgb(160, 0, 210);
-
-  padding: 20px;
-  border-radius: 20px;
+  box-shadow: 0 1vmin 2vmin 0 rgb(160, 0, 210);
+  padding: 2vmin;
+  border-radius: 4vmin;
 }
 
 /*----------------contact me--------------------------------------------------------------------------*/
 .contact-me {
-  font-size: 30px;
+  font-size: 3.5vmin;
   display: flex;
   justify-content: center;
 }
 
 .contact-text {
-  box-shadow: 0 4px 8px 0 rgb(160, 0, 210);
-
-  padding: 20px;
-  font-size: 30px;
-  margin: 60px;
+  box-shadow: 0 1vmin 2vmin 0 rgb(160, 0, 210);
+  padding: 2vmin;
+  font-size: 3.5vmin;
+  margin: 3vmin;
+  border-radius: 3vmin;
 }
 .contact-logo {
-  padding-top: 30px;
+  padding-top: 5vmin;
   display: flex;
   flex-direction: column;
 }
 
 #contact-logo:hover {
-  height: 60px;
-  width: 60px;
+  height: 8vmin;
+  width: 8vmin;
   cursor: pointer;
 }
 .contact-img {
-  padding-top: 30px;
-  margin-bottom: 20px;
+  padding-top: 5vmin;
+  margin-bottom: 4vmin;
 }
 
 /*---------------- footer--------------------------------------------------------------------------------------*/
 .footer {
   background-color: #151719;
   text-align: center;
-  font-size: 50px;
-  padding: 30px;
+  font-size: 8vmin;
+  padding: 5vmin;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .skill {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-me {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
