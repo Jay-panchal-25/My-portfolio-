@@ -296,6 +296,10 @@ nav ul li a {
     display: flex;
     flex-direction: column;
   }
+  .logo {
+    font-size: 9vmin;
+    margin: 2vmin;
+  }
 
   nav ul li a {
     font-size: 5vmin;
@@ -303,6 +307,7 @@ nav ul li a {
   }
   .burger {
     display: block;
+    padding-top: 3vmin;
   }
   .skill {
     display: flex;
